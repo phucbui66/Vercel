@@ -2,6 +2,7 @@
 
 import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+import AdBanner from './AdBanner';
 
 function WaitingContent() {
   const searchParams = useSearchParams();
@@ -58,8 +59,8 @@ function WaitingContent() {
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4 font-sans text-gray-800">
       
       {/* <!-- Banner Quảng Cáo Trên --> */}
-      <div className="w-full max-w-3xl h-24 bg-gray-200 border border-gray-300 border-dashed rounded-lg flex items-center justify-center mb-8 text-gray-400">
-        [Adsterra Banner Script Top]
+      <div className="w-full max-w-3xl min-h-[90px] flex items-center justify-center mb-8">
+        <AdBanner />
       </div>
 
       <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-lg text-center border border-gray-100">
@@ -100,8 +101,8 @@ function WaitingContent() {
       </div>
 
       {/* <!-- Banner Quảng Cáo Dưới --> */}
-      <div className="w-full max-w-3xl h-24 bg-gray-200 border border-gray-300 border-dashed rounded-lg flex items-center justify-center mt-8 text-gray-400">
-        [Adsterra Banner Script Bottom]
+      <div className="w-full max-w-3xl min-h-[90px] flex items-center justify-center mt-8">
+        <AdBanner />
       </div>
 
     </div>

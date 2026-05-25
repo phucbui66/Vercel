@@ -28,6 +28,11 @@ export default function RootLayout({ children }) {
           src="https://pl29550586.effectivecpmnetwork.com/9c/69/d4/9c69d43a251beb8c8ae9fe3bb6afd082.js"
           strategy="afterInteractive"
         />
+        {/* Social Bar */}
+        <Script 
+          src="https://pl29550588.effectivecpmnetwork.com/60/ea/75/60ea75d44514f8fee7ff0dc279f6d037.js"
+          strategy="afterInteractive"
+        />
         {children}
       </body>
     </html>

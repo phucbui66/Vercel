@@ -8,7 +8,7 @@ function WaitingContent() {
   const searchParams = useSearchParams();
   const id = searchParams.get('id');
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://breezy-cameras-yawn.loca.lt';
 
   const [timeLeft, setTimeLeft] = useState(10);
   const [apiStatus, setApiStatus] = useState('Pending');
@@ -28,7 +28,11 @@ function WaitingContent() {
 
     const intervalId = setInterval(async () => {
       try {
-        const response = await fetch(`${API_URL}/api/convert/status/${id}`);
+        const response = await fetch(`${API_URL}/api/convert/status/${id}`, {
+          headers: {
+            'Bypass-Tunnel-Reminder': 'true'
+          }
+        });
         if (response.ok) {
           const data = await response.json();
           setApiStatus(data.status);

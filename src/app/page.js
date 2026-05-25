@@ -1,3 +1,5 @@
+import AdBanner from './waiting/AdBanner';
+
 export default function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -12,6 +14,9 @@ export default function Home() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
           </svg>
         </div>
+      </div>
+      <div className="absolute bottom-8 w-full flex justify-center">
+        <AdBanner />
       </div>
     </div>
   );

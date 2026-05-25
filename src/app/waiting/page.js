@@ -6,13 +6,13 @@ import AdBanner from './AdBanner';
 import AdBanner728 from './AdBanner728';
 
 const OFFICE_TIPS = [
-  "Mẹo: Dùng Ctrl + Shift + L trong Excel để bật/tắt nhanh bộ lọc (Filter).",
-  "Mẹo: Bấm F4 trong Word/Excel để lặp lại thao tác vừa thực hiện.",
-  "Mẹo: Dùng Ctrl + ; để chèn nhanh ngày hiện tại vào ô Excel.",
-  "Mẹo: Trong Word, bôi đen văn bản và bấm Shift + F3 để đổi nhanh chữ hoa/thường.",
-  "Mẹo: Dùng Alt + = trong Excel để tính tổng nhanh (AutoSum).",
-  "Mẹo: Bấm Ctrl + K để chèn nhanh một đường link (Hyperlink).",
-  "Mẹo: Dùng Windows + V để mở lịch sử Clipboard, xem và dán nhiều nội dung."
+  "Tip: Use Ctrl + Shift + L in Excel to quickly toggle filters.",
+  "Tip: Press F4 in Word/Excel to repeat the last action.",
+  "Tip: Use Ctrl + ; to quickly insert the current date in Excel.",
+  "Tip: In Word, highlight text and press Shift + F3 to quickly change case.",
+  "Tip: Use Alt + = in Excel for AutoSum.",
+  "Tip: Press Ctrl + K to quickly insert a hyperlink.",
+  "Tip: Use Windows + V to open Clipboard history to view and paste multiple items."
 ];
 
 function WaitingContent() {
@@ -86,9 +86,9 @@ function WaitingContent() {
       </div>
 
       <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-lg text-center border border-gray-100">
-        <h1 className="text-2xl font-bold text-gray-900 mb-2">Đang xử lý tài liệu</h1>
+        <h1 className="text-2xl font-bold text-gray-900 mb-2">Processing Document</h1>
         <p className="text-gray-500 mb-8 text-sm">
-          Hệ thống đang tự động tối ưu và chuyển đổi file của bạn. Vui lòng không đóng trang này.
+          The system is automatically optimizing and converting your file. Please do not close this page.
         </p>
 
         <div className="flex justify-center mb-8">
@@ -113,11 +113,11 @@ function WaitingContent() {
           }`}
         >
           {!isReady && timeLeft > 0 ? (
-            `Đang chuẩn bị tài nguyên (${timeLeft}s)...`
+            `Preparing resources (${timeLeft}s)...`
           ) : !isReady && timeLeft === 0 ? (
-            'Hệ thống đang nén file, vui lòng đợi...'
+            'System is compressing file, please wait...'
           ) : (
-            'TẢI FILE XONG NGAY'
+            'DOWNLOAD COMPLETED FILE'
           )}
         </button>
 

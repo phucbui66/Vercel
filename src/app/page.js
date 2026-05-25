@@ -1,9 +1,12 @@
 import AdBanner from './waiting/AdBanner';
+import AdBanner728 from './waiting/AdBanner728';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="text-center p-8 bg-white rounded-2xl shadow-lg border border-gray-100 max-w-md w-full">
+    <div className="min-h-screen flex flex-col items-center justify-between bg-gray-50 py-8">
+      <AdBanner728 />
+      
+      <div className="text-center p-8 bg-white rounded-2xl shadow-lg border border-gray-100 max-w-md w-full my-auto">
         <h1 className="text-3xl font-bold text-blue-600 mb-4">OfficeFlex Converter</h1>
         <p className="text-gray-600 text-sm mb-6">
           Hệ thống đang hoạt động tốt! <br/><br/>
@@ -15,7 +18,8 @@ export default function Home() {
           </svg>
         </div>
       </div>
-      <div className="absolute bottom-8 w-full flex justify-center">
+
+      <div className="w-full flex justify-center mt-auto">
         <AdBanner />
       </div>
     </div>

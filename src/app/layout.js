@@ -24,6 +24,20 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        {/* Google Analytics (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SXJ3BZ2V4P"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SXJ3BZ2V4P');
+          `}
+        </Script>
+
         <Script 
           src="https://pl29550586.effectivecpmnetwork.com/9c/69/d4/9c69d43a251beb8c8ae9fe3bb6afd082.js"
           strategy="afterInteractive"

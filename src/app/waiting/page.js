@@ -176,6 +176,7 @@ function WaitingContent() {
             if (ext === '.docx') { iconColor = 'text-blue-500'; iconEmoji = '📝'; }
             else if (ext === '.xlsx') { iconColor = 'text-green-500'; iconEmoji = '📊'; }
             else if (ext === '.pptx') { iconColor = 'text-orange-500'; iconEmoji = '📈'; }
+            else if (ext === '.pdf') { iconColor = 'text-red-500'; iconEmoji = '📕'; }
 
             return (
               <div key={task.id} className="p-4 flex items-center justify-between hover:bg-gray-50 transition-colors">

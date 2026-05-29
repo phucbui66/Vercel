@@ -22,7 +22,7 @@ function WaitingContent() {
   const ids = idsParam ? idsParam.split(',').filter(Boolean) : [];
   const names = namesParam ? namesParam.split(',').map(decodeURIComponent) : [];
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://angry-starfish-17.loca.lt';
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://breezy-cameras-yawn.loca.lt';
 
   const [timeLeft, setTimeLeft] = useState(10);
   const [tasks, setTasks] = useState({});

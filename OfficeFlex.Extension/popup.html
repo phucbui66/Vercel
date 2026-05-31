@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OfficeFlex Converter</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>OfficeFlex</h2>
+        <p class="subtitle">Smart Office Converter</p>
+        
+        <div id="drop-zone" class="drop-zone">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 3v5h5M12 18v-6M9 15h6"/></svg>
+            <p>Drag & Drop Office files here</p>
+            <span class="extensions">(.docx, .xlsx, .pptx, .pdf)</span>
+            <input type="file" id="file-input" accept=".docx,.xlsx,.pptx,.pdf" multiple hidden>
+        </div>
+
+        <div id="file-info" class="file-info hidden">
+            <div id="file-list" class="file-list"></div>
+            <div class="controls">
+                <label for="format-select">Convert to:</label>
+                <select id="format-select">
+                    <option value="pdf">PDF</option>
+                </select>
+            </div>
+            <div class="action-buttons">
+                <button id="add-more-btn" class="secondary-btn" type="button">Add Files</button>
+                <button id="convert-btn" class="primary-btn">Convert</button>
+            </div>
+        </div>
+
+        <div id="status-message" class="status-message hidden"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
